@@ -6,9 +6,9 @@
     <div>
       <div v-for="v,k in box" class="rem">{{v}}</div>
     </div>
-    <!-- <div>
+    <div>
       <div v-for="v,k in box" class="example">{{v}}</div>
-    </div> -->
+    </div>
   </div>
 </template>
 
