@@ -1,0 +1,17 @@
+<html>
+  <body>
+    <button onclick="jsonp()">点我发送jsonp</button>
+  </body>
+  <script>
+    function jsonp () {
+      let script = document.createElement('script');
+      script.type = 'text/javascript';
+      // script.src = 'your adress';
+      script.src = 'http://192.168.2.128:3000/api/jsonp?cb=doSomething&name=nurun';
+      document.head.appendChild(script);
+    }
+    function doSomething(res) {
+      console.log(res.result);
+    }
+  </script>
+</html>
