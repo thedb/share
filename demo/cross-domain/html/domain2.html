@@ -1,0 +1,14 @@
+<html>
+  <body>
+    <button class="btn">点我跨域哦～</button>
+  </body>
+  <script>
+    document.domain = '192.168.2.128';
+    // 获取父窗口中变量
+    console.log('get js data from parent ---> ' + window.parent.user);
+    const btn = document.querySelectorAll('.btn')[0];
+    btn.addEventListener('click', () => {
+      alert(window.parent.user + 'world')
+    })
+  </script>
+</html>

@@ -1,0 +1,16 @@
+<html>
+  <body>
+    <button class="btn">点我改变值</button>
+  </body>
+  <iframe id="iframe" src="http://192.168.2.128:8000/domain2.html"></iframe>
+  <script>
+    document.domain = '192.168.2.128';
+    var user = 'jason ';
+    alert(user);
+    const btn = document.querySelectorAll('.btn')[0];
+    btn.addEventListener('click', () => {
+      user = 'Hello '
+      console.log(user)
+    })
+  </script>
+</html>
