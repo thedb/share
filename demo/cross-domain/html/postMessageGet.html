@@ -1,0 +1,17 @@
+<html>
+  <iframe id="iframe" src="http://192.168.2.128:3000/postMessageSend.html" style="display:none;"></iframe>
+  <script>
+    let iframe = document.getElementById('iframe');
+    iframe.onload = () => {
+      let data = {
+          getMessage: 'jason world'
+      };
+      // 向send页面传送跨域数据
+      iframe.contentWindow.postMessage(JSON.stringify(data), 'http://192.168.2.128:3000');
+    };
+    // 接受send返回数据
+    window.addEventListener('message', function(e) {
+      alert('data from send ---> ' + e.data);
+    }, false);
+  </script>
+</html>
